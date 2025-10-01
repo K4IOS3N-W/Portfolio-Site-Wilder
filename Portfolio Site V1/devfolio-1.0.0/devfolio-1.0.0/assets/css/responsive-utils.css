@@ -1,0 +1,58 @@
+/* Responsive Utility Classes */
+
+/* Text sizing utilities */
+.text-responsive {
+    font-size: clamp(14px, 2.5vw, 18px);
+}
+
+/* Spacing utilities */
+.padding-responsive {
+    padding: clamp(10px, 3vw, 30px);
+}
+
+.margin-responsive {
+    margin: clamp(10px, 3vw, 30px);
+}
+
+/* Container utilities */
+.container-fluid-responsive {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 clamp(10px, 3vw, 30px);
+}
+
+/* Hide/show utilities */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+    
+    .show-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .show-mobile {
+        display: block !important;
+    }
+}
+
+/* Flexible grid system */
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(15px, 3vw, 30px);
+}
+
+/* Button responsive sizing */
+.btn-responsive {
+    padding: clamp(8px, 2vw, 14px) clamp(16px, 4vw, 24px);
+    font-size: clamp(12px, 2vw, 16px);
+}
