@@ -9,24 +9,21 @@ class PortfolioCarousel {
 
         this.projectData = {
             1: {
-                title: "Space Adventure RPG",
-                description: "An epic space exploration game featuring RPG elements, dynamic combat system, and procedurally generated worlds. Players embark on interstellar journeys, build their crew, and uncover the mysteries of the galaxy.",
+                title: "Side Scroller Teleport Mechanic",
+                description: "A unique side-scrolling platformer that introduces innovative teleportation mechanics, allowing players to navigate through challenging levels in creative ways.",
                 video: "assets/videos/project-1-demo.mp4",
                 poster: "assets/img/portfolio/game-1.jpg",
-                technologies: ["Unity", "C#", "Photon Network", "ProBuilder"],
+                technologies: ["Unreal Engine", "C++", "Blueprints"],
                 features: [
-                    "Real-time multiplayer combat system",
-                    "Procedurally generated star systems",
-                    "Character progression and skill trees",
-                    "Ship customization and upgrades",
-                    "Dynamic quest system",
-                    "Cross-platform compatibility"
+                    "Innovative teleportation mechanics navigating between the top and bottom side of the level",
+                    "Secondary teleport ability that allows the player to teleport behind previously hit enemies",
+                    "Side scrolling movement"
                 ],
-                role: "Lead Developer",
+                role: "Gameplay Programmer",
                 status: "Completed",
-                platform: "PC/Mobile",
+                platform: "PC",
                 duration: "6 months",
-                teamSize: "Solo Project",
+                teamSize: "2 Developers",
                 screenshots: [
                     "assets/img/screenshots/space-1.jpg",
                     "assets/img/screenshots/space-2.jpg",
@@ -37,24 +34,22 @@ class PortfolioCarousel {
                 downloadUrl: "https://itch.io/your-game"
             },
             2: {
-                title: "Mind Bender Puzzles",
-                description: "A challenging puzzle platformer that bends reality. Players manipulate gravity, time, and space to solve intricate puzzles across multiple dimensions.",
+                title: "Visual Novel Framework",
+                description: "A versatile framework for creating visual novels with branching narratives and rich character interactions and DND-like mechanics.",
                 video: "assets/videos/project-2-demo.mp4",
                 poster: "assets/img/portfolio/game-2.jpg",
-                technologies: ["Unreal Engine", "Blueprint", "Niagara FX"],
+                technologies: ["Unity", "C#", "ink"],
                 features: [
-                    "Reality-bending puzzle mechanics",
-                    "Multi-dimensional level design",
-                    "Physics-based puzzle solving",
-                    "Stunning visual effects",
-                    "Intuitive control system",
-                    "Progressive difficulty curve"
+                    "Branching narrative system",
+                    "multiple endings based on player choices",
+                    "DND-inspired character stats and skill checks",
+                    "combat system with turn-based mechanics",
                 ],
                 role: "Game Designer & Developer",
                 status: "Completed",
                 platform: "PC",
                 duration: "4 months",
-                teamSize: "2 Developers",
+                teamSize: "1 Developer",
                 screenshots: [
                     "assets/img/screenshots/puzzle-1.jpg",
                     "assets/img/screenshots/puzzle-2.jpg"
@@ -64,24 +59,22 @@ class PortfolioCarousel {
                 downloadUrl: "https://store.steampowered.com/your-game"
             },
             3: {
-                title: "Neon Speed Racing",
-                description: "High-octane arcade racing game with cyberpunk aesthetics. Experience lightning-fast speeds through neon-lit cityscapes with advanced AI opponents.",
+                title: "Doom-like First-Person Shooter",
+                description: "Fast-paced first-person shooter inspired by classic Doom gameplay. Battle through hordes of enemies with a variety of weapons.",
                 video: "assets/videos/project-3-demo.mp4",
                 poster: "assets/img/portfolio/game-3.jpg",
-                technologies: ["Unity", "C#", "Universal RP", "Cinemachine"],
+                technologies: ["Unity", "C#", "Universal RP"],
                 features: [
-                    "Arcade-style racing mechanics",
-                    "Cyberpunk visual design",
-                    "Advanced AI racing opponents",
-                    "Dynamic weather system",
-                    "Vehicle customization",
-                    "Leaderboard system"
+                    "Fast-paced combat mechanics",
+                    "Retro visual design",
+                    "Variety of weapons",
+                    "Enemy AI"
                 ],
                 role: "Gameplay Programmer",
                 status: "Completed",
                 platform: "PC/Console",
-                duration: "3 months",
-                teamSize: "3 Developers",
+                duration: "2 months",
+                teamSize: "5 Developers",
                 screenshots: [
                     "assets/img/screenshots/racing-1.jpg",
                     "assets/img/screenshots/racing-2.jpg",
@@ -92,23 +85,21 @@ class PortfolioCarousel {
                 downloadUrl: "https://your-game-store.com"
             },
             4: {
-                title: "Kingdom Builder",
-                description: "Strategic city-building game where players construct and manage their medieval kingdom. Balance resources, defend against threats, and expand your territory.",
+                title: "Side Scroller Push-Pull Mechanic",
+                description: "A unique side-scrolling game featuring a push-pull mechanic that allows players to manipulate the environment and solve puzzles.",
                 video: "assets/videos/project-4-demo.mp4",
                 poster: "assets/img/portfolio/game-4.jpg",
-                technologies: ["Godot", "GDScript", "SQLite", "HTTP Client"],
+                technologies: ["Unreal Engine", "C++", "Blueprint"],
                 features: [
-                    "Real-time strategy mechanics",
-                    "Resource management system",
-                    "Kingdom expansion gameplay",
-                    "Diplomacy and trade systems",
-                    "Siege warfare mechanics",
-                    "Save system with cloud sync"
+                    "Push-pull mechanic for environmental manipulation",
+                    "Challenging puzzles and obstacles",
                 ],
-                role: "Systems Programmer",
-                status: "In Progress",
-                platform: "PC/Mobile",
-                duration: "8 months",
+                    
+                
+                role: "Gameplay Programmer",
+                status: "Completed",
+                platform: "PC",
+                duration: "3 months",
                 teamSize: "4 Developers",
                 screenshots: [
                     "assets/img/screenshots/kingdom-1.jpg",
