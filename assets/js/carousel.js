@@ -6,13 +6,16 @@ class PortfolioCarousel {
         this.modalClose = document.getElementById('modalClose');
         this.autoScrollIntervals = new Map();
         this.currentPositions = new Map(); // Track current position of each carousel
+        this.lightbox = null;
+        this.currentScreenshots = [];
+        this.currentScreenshotIndex = 0;
 
         this.projectData = {
             1: {
                 title: "Side Scroller Teleport Mechanic",
                 description: "A unique side-scrolling platformer that introduces innovative teleportation mechanics, allowing players to navigate through challenging levels in creative ways.",
-                video: "assets/videos/project-1-demo.mp4",
-                poster: "assets/img/portfolio/game-1.jpg",
+                video: "assets/img/printSite/upside-down/clip1.mkv",
+                poster: "assets/img/printSite/upside-down/print1.png",
                 technologies: ["Unreal Engine", "C++", "Blueprints"],
                 features: [
                     "Innovative teleportation mechanics navigating between the top and bottom side of the level",
@@ -25,9 +28,9 @@ class PortfolioCarousel {
                 duration: "6 months",
                 teamSize: "2 Developers",
                 screenshots: [
-                    "assets/img/screenshots/space-1.jpg",
-                    "assets/img/screenshots/space-2.jpg",
-                    "assets/img/screenshots/space-3.jpg"
+                    "assets/img/printSite/upside-down/print1.png",
+                    "assets/img/printSite/upside-down/print2.png",
+                    "assets/img/printSite/upside-down/print3.png"
                 ],
                 liveUrl: "https://your-game.com",
                 githubUrl: "https://github.com/yourusername/space-adventure",
@@ -36,8 +39,8 @@ class PortfolioCarousel {
             2: {
                 title: "Visual Novel Framework",
                 description: "A versatile framework for creating visual novels with branching narratives and rich character interactions and DND-like mechanics.",
-                video: "assets/videos/project-2-demo.mp4",
-                poster: "assets/img/portfolio/game-2.jpg",
+                video: "assets/img/printSite/framework/clip1.mkv",
+                poster: "assets/img/printSite/framework/print1.png",
                 technologies: ["Unity", "C#", "ink"],
                 features: [
                     "Branching narrative system",
@@ -51,8 +54,9 @@ class PortfolioCarousel {
                 duration: "4 months",
                 teamSize: "1 Developer",
                 screenshots: [
-                    "assets/img/screenshots/puzzle-1.jpg",
-                    "assets/img/screenshots/puzzle-2.jpg"
+                    "assets/img/printSite/framework/print1.png",
+                    "assets/img/printSite/framework/print2.png",
+                    "assets/img/printSite/framework/print3.png"
                 ],
                 liveUrl: "https://your-puzzle-game.com",
                 githubUrl: "https://github.com/yourusername/mind-bender",
@@ -121,7 +125,7 @@ class PortfolioCarousel {
         this.setupModal();
         this.setupProjectCards();
         this.startAutoScroll();
-        this.setupMediaTabs();
+        this.setupScreenshotLightbox();
         this.handleWindowResize();
     }
 
@@ -257,27 +261,6 @@ class PortfolioCarousel {
         });
     }
 
-    setupMediaTabs() {
-        const mediaTabs = document.querySelectorAll('.media-tab');
-        mediaTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs and content
-                document.querySelectorAll('.media-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.media-content').forEach(c => c.classList.remove('active'));
-
-                // Add active class to clicked tab
-                tab.classList.add('active');
-
-                // Show corresponding content
-                const tabType = tab.dataset.tab;
-                const content = document.getElementById(`${tabType}-content`);
-                if (content) {
-                    content.classList.add('active');
-                }
-            });
-        });
-    }
-
     setupProjectCards() {
         const cards = document.querySelectorAll('.portfolio-card');
         cards.forEach(card => {
@@ -346,7 +329,11 @@ class PortfolioCarousel {
         // Update video
         const video = document.getElementById('projectVideo');
         if (video) {
-            video.src = project.video;
+            const source = video.querySelector('source');
+            if (source) {
+                source.src = project.video;
+                video.load();
+            }
             video.poster = project.poster;
         }
 
@@ -358,23 +345,30 @@ class PortfolioCarousel {
                 .join('');
         }
 
-        // Update technologies - show all in one section for simplicity
+        // Update technologies - priority display with enhanced styling
         const engineContainer = document.getElementById('projectEngine');
         if (project.technologies && engineContainer) {
             const techTags = project.technologies
-                .map(tech => `<span class="tech-tag">${tech}</span>`)
+                .map(tech => `<span class="tech-tag"><i class="bi bi-code-square"></i> ${tech}</span>`)
                 .join('');
             engineContainer.innerHTML = techTags;
         }
 
-        // Update role and project stats
+        // Update development info - structured grid layout
         const roleContainer = document.getElementById('projectRole');
         if (roleContainer && project.role) {
             roleContainer.innerHTML = `
-                <span class="role-badge">${project.role}</span>
-                <div class="project-stats">
-                    <span><i class="bi bi-clock"></i> ${project.duration || 'N/A'}</span>
-                    <span><i class="bi bi-people"></i> ${project.teamSize || 'Solo'}</span>
+                <div class="dev-info-item">
+                    <strong><i class="bi bi-person-badge"></i> Role</strong>
+                    <span class="role-badge">${project.role}</span>
+                </div>
+                <div class="dev-info-item">
+                    <strong><i class="bi bi-clock"></i> Duration</strong>
+                    <span>${project.duration || 'N/A'}</span>
+                </div>
+                <div class="dev-info-item">
+                    <strong><i class="bi bi-people"></i> Team Size</strong>
+                    <span>${project.teamSize || 'Solo'}</span>
                 </div>
             `;
         }
@@ -382,23 +376,127 @@ class PortfolioCarousel {
         // Update screenshots gallery
         const screenshotGallery = document.getElementById('screenshotGallery');
         if (screenshotGallery && project.screenshots) {
+            this.currentScreenshots = project.screenshots;
             screenshotGallery.innerHTML = project.screenshots
-                .map(screenshot => `
-                    <div class="screenshot-item">
+                .map((screenshot, index) => `
+                    <div class="screenshot-item" data-index="${index}">
                         <img src="${screenshot}" alt="Project Screenshot" />
                     </div>
                 `)
                 .join('');
+            
+            // Add click handlers to screenshots
+            setTimeout(() => {
+                const screenshotItems = screenshotGallery.querySelectorAll('.screenshot-item');
+                screenshotItems.forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        const index = parseInt(item.dataset.index);
+                        this.openLightbox(index);
+                    });
+                });
+            }, 100);
         }
 
         // Update project links
         const liveLink = document.getElementById('projectLive');
         const githubLink = document.getElementById('projectGithub');
-        const downloadLink = document.getElementById('projectDownload');
+        const downloadLink = document.getElementById('projectDownloadLink');
 
         if (liveLink) liveLink.href = project.liveUrl || '#';
         if (githubLink) githubLink.href = project.githubUrl || '#';
         if (downloadLink) downloadLink.href = project.downloadUrl || '#';
+    }
+
+    setupScreenshotLightbox() {
+        this.lightbox = document.getElementById('screenshotLightbox');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', () => this.closeLightbox());
+        }
+
+        if (lightboxPrev) {
+            lightboxPrev.addEventListener('click', () => this.navigateLightbox(-1));
+        }
+
+        if (lightboxNext) {
+            lightboxNext.addEventListener('click', () => this.navigateLightbox(1));
+        }
+
+        // Close on background click
+        if (this.lightbox) {
+            this.lightbox.addEventListener('click', (e) => {
+                if (e.target === this.lightbox) {
+                    this.closeLightbox();
+                }
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (this.lightbox && this.lightbox.style.display === 'flex') {
+                if (e.key === 'Escape') {
+                    this.closeLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    this.navigateLightbox(-1);
+                } else if (e.key === 'ArrowRight') {
+                    this.navigateLightbox(1);
+                }
+            }
+        });
+    }
+
+    openLightbox(index) {
+        if (!this.lightbox || !this.currentScreenshots.length) return;
+
+        this.currentScreenshotIndex = index;
+        const lightboxImage = document.getElementById('lightboxImage');
+        
+        if (lightboxImage) {
+            lightboxImage.src = this.currentScreenshots[index];
+        }
+
+        this.lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+        // Add fade-in animation
+        setTimeout(() => {
+            this.lightbox.style.opacity = '1';
+        }, 10);
+    }
+
+    closeLightbox() {
+        if (!this.lightbox) return;
+
+        this.lightbox.style.opacity = '0';
+        setTimeout(() => {
+            this.lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    navigateLightbox(direction) {
+        if (!this.currentScreenshots.length) return;
+
+        this.currentScreenshotIndex += direction;
+
+        // Loop around
+        if (this.currentScreenshotIndex < 0) {
+            this.currentScreenshotIndex = this.currentScreenshots.length - 1;
+        } else if (this.currentScreenshotIndex >= this.currentScreenshots.length) {
+            this.currentScreenshotIndex = 0;
+        }
+
+        const lightboxImage = document.getElementById('lightboxImage');
+        if (lightboxImage) {
+            lightboxImage.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImage.src = this.currentScreenshots[this.currentScreenshotIndex];
+                lightboxImage.style.opacity = '1';
+            }, 150);
+        }
     }
 
     closeModal() {

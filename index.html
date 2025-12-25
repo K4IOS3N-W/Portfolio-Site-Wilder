@@ -282,20 +282,12 @@
                             <i class="bi bi-x-lg"></i>
                         </button>
 
-                        <!-- Modal Header with Media Tabs -->
+                        <!-- Modal Header with Media in Row -->
                         <div class="modal-header">
-                            <div class="project-media-tabs">
-                                <button class="media-tab active" data-tab="video">
-                                    <i class="bi bi-play-circle"></i> Gameplay
-                                </button>
-                                <button class="media-tab" data-tab="screenshots">
-                                    <i class="bi bi-images"></i> Screenshots
-                                </button>
-                            </div>
-
-                            <div class="project-media">
-                                <!-- Video Tab -->
-                                <div class="media-content active" id="video-content">
+                            <div class="project-media-row">
+                                <!-- Video Section -->
+                                <div class="media-section video-section">
+                                    <h4 class="media-section-title"><i class="bi bi-play-circle"></i> Gameplay</h4>
                                     <div class="project-trailer">
                                         <video id="projectVideo" controls poster="">
                                             <source src="" type="video/mp4">
@@ -304,8 +296,9 @@
                                     </div>
                                 </div>
 
-                                <!-- Screenshots Tab -->
-                                <div class="media-content" id="screenshots-content">
+                                <!-- Screenshots Section -->
+                                <div class="media-section screenshots-section">
+                                    <h4 class="media-section-title"><i class="bi bi-images"></i> Screenshots</h4>
                                     <div class="screenshot-gallery" id="screenshotGallery">
                                         <!-- Screenshots will be inserted here -->
                                     </div>
@@ -333,63 +326,81 @@
                                 </div>
                             </div>
 
-                            <div class="project-content">
-                                <!-- Project Overview -->
-                                <div class="content-section">
-                                    <h3><i class="bi bi-info-circle"></i> Project Overview</h3>
-                                    <p id="projectDescription">Project description goes here...</p>
-                                </div>
+                            <!-- Two Column Layout: Technical Priority -->
+                            <div class="modal-two-column">
+                                <!-- Left Column: Technical Details (Priority) -->
+                                <div class="modal-left-column">
+                                    <!-- Technical Stack -->
+                                    <div class="content-section tech-section-primary">
+                                        <h3><i class="bi bi-gear-fill"></i> Technical Stack</h3>
+                                        <div class="tech-showcase" id="projectEngine">
+                                            <span class="tech-tag">Unity</span>
+                                            <span class="tech-tag">C#</span>
+                                        </div>
+                                    </div>
 
-                                <!-- Game Features -->
-                                <div class="content-section">
-                                    <h3><i class="bi bi-star"></i> Key Features</h3>
-                                    <ul id="projectFeatures" class="features-list">
-                                        <!-- Features will be inserted here -->
-                                    </ul>
-                                </div>
+                                    <!-- Key Features -->
+                                    <div class="content-section features-section-primary">
+                                        <h3><i class="bi bi-stars"></i> Key Features</h3>
+                                        <ul id="projectFeatures" class="features-list">
+                                            <li><i class="bi bi-check-circle-fill"></i> Feature 1</li>
+                                        </ul>
+                                    </div>
 
-                                <!-- Technical Details -->
-                                <div class="content-section">
-                                    <h3><i class="bi bi-gear"></i> Technologies Used</h3>
-                                    <div class="tech-grid">
-                                        <div class="tech-item">
-                                            <h4>Tech Stack</h4>
-                                            <div id="projectEngine" class="tech-tags"></div>
+                                    <!-- Development Info -->
+                                    <div class="content-section dev-info-section">
+                                        <h3><i class="bi bi-info-circle-fill"></i> Development Info</h3>
+                                        <div class="dev-info-grid" id="projectRole">
+                                            <div class="dev-info-item">
+                                                <strong>Role:</strong>
+                                                <span class="role-badge">Gameplay Programmer</span>
+                                            </div>
+                                            <div class="dev-info-item">
+                                                <strong>Duration:</strong>
+                                                <span>6 months</span>
+                                            </div>
+                                            <div class="dev-info-item">
+                                                <strong>Team Size:</strong>
+                                                <span>4 Developers</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- My Role -->
-                                <div class="content-section">
-                                    <h3><i class="bi bi-person-check"></i> My Role</h3>
-                                    <div id="projectRole" class="role-info"></div>
-                                </div>
+                                <!-- Right Column: Overview & Links -->
+                                <div class="modal-right-column">
+                                    <!-- Project Overview -->
+                                    <div class="content-section overview-section">
+                                        <h3><i class="bi bi-file-text"></i> Overview</h3>
+                                        <p id="projectDescription">Project description goes here...</p>
+                                    </div>
 
-                                <!-- Project Links -->
-                                <div class="content-section">
-                                    <h3><i class="bi bi-link-45deg"></i> Links</h3>
-                                    <div class="project-links-grid">
-                                        <a href="#" id="projectLive" class="btn-link" target="_blank">
-                                            <i class="bi bi-globe"></i>
-                                            <div>
-                                                <span>Play Online</span>
-                                                <small>Try the game</small>
-                                            </div>
-                                        </a>
-                                        <a href="#" id="projectGithub" class="btn-link" target="_blank">
-                                            <i class="bi bi-github"></i>
-                                            <div>
-                                                <span>Source Code</span>
-                                                <small>View on GitHub</small>
-                                            </div>
-                                        </a>
-                                        <a href="#" id="projectDownload" class="btn-link" target="_blank">
-                                            <i class="bi bi-download"></i>
-                                            <div>
-                                                <span>Download</span>
-                                                <small>Get the game</small>
-                                            </div>
-                                        </a>
+                                    <!-- Project Links -->
+                                    <div class="content-section links-section">
+                                        <h3><i class="bi bi-link-45deg"></i> Project Links</h3>
+                                        <div class="project-links-grid">
+                                            <a href="#" id="projectLive" class="btn-link" target="_blank">
+                                                <i class="bi bi-globe"></i>
+                                                <div>
+                                                    <span>Play Online</span>
+                                                    <small>Try the game</small>
+                                                </div>
+                                            </a>
+                                            <a href="#" id="projectGithub" class="btn-link" target="_blank">
+                                                <i class="bi bi-github"></i>
+                                                <div>
+                                                    <span>Source Code</span>
+                                                    <small>View on GitHub</small>
+                                                </div>
+                                            </a>
+                                            <a href="#" id="projectDownloadLink" class="btn-link" target="_blank">
+                                                <i class="bi bi-download"></i>
+                                                <div>
+                                                    <span>Download</span>
+                                                    <small>Get the game</small>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -399,6 +410,23 @@
             </div>
         </section>
         <!-- /My Work Section -->
+
+        <!-- Screenshot Lightbox -->
+        <div class="screenshot-lightbox" id="screenshotLightbox">
+            <button class="lightbox-close" id="lightboxClose">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+            <div class="lightbox-content">
+                <img id="lightboxImage" src="" alt="Screenshot" />
+            </div>
+        </div>
+
         <!-- Curriculum Section (Resume) -->
         <section id="resume" class="resume section">
             <div class="container section-title" data-aos="fade-up">
