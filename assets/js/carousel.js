@@ -63,16 +63,16 @@ class PortfolioCarousel {
                 downloadUrl: "https://store.steampowered.com/your-game"
             },
             3: {
-                title: "Doom-like First-Person Shooter",
-                description: "Fast-paced first-person shooter inspired by classic Doom gameplay. Battle through hordes of enemies with a variety of weapons.",
+                title: "Fishing Game using PSMove",
+                description: "An immersive fishing game that utilizes PSMove controllers to simulate real-life fishing experiences, complete with a narrator that guides players through the game.",
                 video: "assets/videos/project-3-demo.mp4",
                 poster: "assets/img/portfolio/game-3.jpg",
                 technologies: ["Unity", "C#", "Universal RP"],
                 features: [
-                    "Fast-paced combat mechanics",
-                    "Retro visual design",
-                    "Variety of weapons",
-                    "Enemy AI"
+                    "Realistic fishing mechanics using PSMove controllers",
+                    "Immersive narrator guiding the player",
+                    "Varied fishing locations",
+                    "Bears and other wildlife interactions",
                 ],
                 role: "Gameplay Programmer",
                 status: "Completed",
