@@ -40,7 +40,7 @@ class PortfolioCarousel {
                 title: "Visual Novel Framework",
                 description: "A versatile framework for creating visual novels with branching narratives and rich character interactions and DND-like mechanics.",
                 video: "assets/img/printSite/framework/clip1.mkv",
-                poster: "assets/img/printSite/framework/print1.png",
+                poster: "assets/img/printSite/framework/print2.png",
                 technologies: ["Unity", "C#", "ink"],
                 features: [
                     "Branching narrative system",
@@ -91,9 +91,9 @@ class PortfolioCarousel {
             4: {
                 title: "Side Scroller Push-Pull Mechanic",
                 description: "A unique side-scrolling game featuring a push-pull mechanic that allows players to manipulate the environment and solve puzzles.",
-                video: "assets/videos/project-4-demo.mp4",
-                poster: "assets/img/portfolio/game-4.jpg",
-                technologies: ["Unreal Engine", "C++", "Blueprint"],
+                video: "assets/img/printSite/push-pull/clip1.mkv",
+                poster: "assets/img/printSite/push-pull/print1.png",
+                technologies: ["Unity", "C#", "Universal RP"],
                 features: [
                     "Push-pull mechanic for environmental manipulation",
                     "Challenging puzzles and obstacles",
@@ -106,10 +106,10 @@ class PortfolioCarousel {
                 duration: "3 months",
                 teamSize: "4 Developers",
                 screenshots: [
-                    "assets/img/screenshots/kingdom-1.jpg",
-                    "assets/img/screenshots/kingdom-2.jpg",
-                    "assets/img/screenshots/kingdom-3.jpg",
-                    "assets/img/screenshots/kingdom-4.jpg"
+                    "assets/img/printSite/push-pull/print1.png",
+                    "assets/img/printSite/push-pull/print2.png",
+                    "assets/img/printSite/push-pull/print3.png",
+                    "assets/img/printSite/push-pull/print4.png"
                 ],
                 liveUrl: "https://kingdom-builder-demo.com",
                 githubUrl: "https://github.com/yourusername/kingdom-builder",
