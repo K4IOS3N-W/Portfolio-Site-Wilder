@@ -65,8 +65,8 @@ class PortfolioCarousel {
             3: {
                 title: "Fishing Game using PSMove",
                 description: "An immersive fishing game that utilizes PSMove controllers to simulate real-life fishing experiences, complete with a narrator that guides players through the game.",
-                video: "assets/videos/project-3-demo.mp4",
-                poster: "assets/img/portfolio/game-3.jpg",
+                video: "assets/img/printSite/fish/clip1.mkv",
+                poster: "assets/img/printSite/fish/print 2.png",
                 technologies: ["Unity", "C#", "Universal RP"],
                 features: [
                     "Realistic fishing mechanics using PSMove controllers",
@@ -80,9 +80,9 @@ class PortfolioCarousel {
                 duration: "2 months",
                 teamSize: "5 Developers",
                 screenshots: [
-                    "assets/img/screenshots/racing-1.jpg",
-                    "assets/img/screenshots/racing-2.jpg",
-                    "assets/img/screenshots/racing-3.jpg"
+                    "assets/img/printSite/fish/print 1.png",
+                    "assets/img/printSite/fish/print 2.png"
+                    
                 ],
                 liveUrl: "https://your-racing-game.com",
                 githubUrl: "https://github.com/yourusername/neon-racing",
