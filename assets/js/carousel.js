@@ -39,7 +39,7 @@ class PortfolioCarousel {
             2: {
                 title: "Visual Novel Framework",
                 description: "A versatile framework for creating visual novels with branching narratives and rich character interactions and DND-like mechanics.",
-                video: "assets/img/printSite/framework/clip1.mkv",
+                video: "assets/img/printSite/framework/Clip2.mkv",
                 poster: "assets/img/printSite/framework/print2.png",
                 technologies: ["Unity", "C#", "ink"],
                 features: [
