@@ -2984,10 +2984,13 @@ img {
     display: flex;
     justify-content: space-between;
     pointer-events: none;
-    z-index: 5;
+    /* must stay above .portfolio-card:hover (z-index: 10) or hovered cards cover the arrows */
+    z-index: 20;
 }
 
 .nav-btn {
+    /* position is required for z-index to take effect (was static, so it was ignored) */
+    position: relative;
     width: 40px;
     height: 40px;
     background: rgba(0, 0, 0, 0.8);

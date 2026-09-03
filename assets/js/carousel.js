@@ -14,7 +14,7 @@ class PortfolioCarousel {
             1: {
                 title: "Side Scroller Teleport Mechanic",
                 description: "A unique side-scrolling platformer that introduces innovative teleportation mechanics, allowing players to navigate through challenging levels in creative ways.",
-                video: "assets/img/printSite/upside-down/clip1.mkv",
+                video: "assets/img/printSite/upside-down/Clip1.mkv",
                 poster: "assets/img/printSite/upside-down/print1.png",
                 technologies: ["Unreal Engine", "C++", "Blueprints"],
                 features: [
@@ -186,8 +186,8 @@ class PortfolioCarousel {
             // Calculate maximum scroll (when last card is visible)
             const maxScroll = -(totalCards - visibleCards) * scrollAmount;
             
-            // If we've reached the end, loop back to beginning
-            if (newPosition <= maxScroll) {
+            // Only loop back once we'd scroll past the last page, so the last page is shown first
+            if (newPosition < maxScroll) {
                 newPosition = 0;
             }
         } else {
@@ -322,7 +322,7 @@ class PortfolioCarousel {
 
         if (statusElement) {
             statusElement.textContent = project.status || 'Completed';
-            statusElement.className = `status-badge ${project.status?.toLowerCase().replace(' ', '_') || 'completed'}`;
+            statusElement.className = `status-badge ${project.status?.toLowerCase().replace(/ /g, '_') || 'completed'}`;
         }
         if (platformElement) platformElement.textContent = project.platform || 'PC';
 
@@ -332,6 +332,10 @@ class PortfolioCarousel {
             const source = video.querySelector('source');
             if (source) {
                 source.src = project.video;
+                // set MIME type from the actual file extension so the browser doesn't reject a mismatched hint
+                const ext = project.video.split('.').pop().toLowerCase();
+                const mimeTypes = { mp4: 'video/mp4', webm: 'video/webm', ogg: 'video/ogg', mkv: 'video/x-matroska' };
+                source.type = mimeTypes[ext] || 'video/mp4';
                 video.load();
             }
             video.poster = project.poster;
@@ -397,14 +401,6 @@ class PortfolioCarousel {
             }, 100);
         }
 
-        // Update project links
-        const liveLink = document.getElementById('projectLive');
-        const githubLink = document.getElementById('projectGithub');
-        const downloadLink = document.getElementById('projectDownloadLink');
-
-        if (liveLink) liveLink.href = project.liveUrl || '#';
-        if (githubLink) githubLink.href = project.githubUrl || '#';
-        if (downloadLink) downloadLink.href = project.downloadUrl || '#';
     }
 
     setupScreenshotLightbox() {
