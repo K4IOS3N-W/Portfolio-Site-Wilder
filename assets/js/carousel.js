@@ -114,6 +114,91 @@ class PortfolioCarousel {
                 liveUrl: "https://kingdom-builder-demo.com",
                 githubUrl: "https://github.com/yourusername/kingdom-builder",
                 downloadUrl: "https://itch.io/kingdom-builder"
+            },
+            // Placeholder VFX project entries - replace with real media and details
+            5: {
+                title: "Explosion Effect",
+                description: "An explosive visual effect created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/ChaosExplosionV3.mkv",
+                poster: "assets/img/printSite/ExplosionPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/ExplosionPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            6: {
+                title: "Lightning Strike Effect",
+                description: "A lightning strike visual effect created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/Lightning.mkv",
+                poster: "assets/img/printSite/LightningPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/LightningPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            7: {
+                title: "Rain Effect",
+                description: "A rain visual effect created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/RainFX.mkv",
+                poster: "assets/img/printSite/RainPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/RainPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            8: {
+                title: "Portal Effect",
+                description: "A portal visual effect created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/PortalFX.mkv",
+                poster: "assets/img/printSite/PortalPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/PortalPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
             }
         };
 
