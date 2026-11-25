@@ -199,6 +199,195 @@ class PortfolioCarousel {
                 liveUrl: "",
                 githubUrl: "",
                 downloadUrl: ""
+            },
+            9: {
+                title: "Bouncing Lightning Effect",
+                description: "A chaining lightning bolt that arcs and bounces between targets, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/BouncingLightning.mkv",
+                poster: "assets/img/printSite/BouncingLightningPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/BouncingLightningPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            10: {
+                title: "Flower Petal Sword Effect",
+                description: "Twin pillars of light that burst into a storm of glowing pink petals, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/FlowerPetalSword.mkv",
+                poster: "assets/img/printSite/FlowerPetalSwordPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/FlowerPetalSwordPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            11: {
+                title: "Gunshot Effect",
+                description: "Muzzle flashes and bullet effects for a third-person shooter, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/GunShotsVFX.mkv",
+                poster: "assets/img/printSite/GunShotsPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/GunShotsPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            12: {
+                title: "Ice Effect",
+                description: "A freezing effect that engulfs a character in frost, encases them in ice and cracks the ground with ice spikes, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/IceVFX.mkv",
+                poster: "assets/img/printSite/IcePrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/IcePrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            13: {
+                title: "Magic Beam Effect",
+                description: "A spiralling purple magic beam with rune rings and crystal shards at its base, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/MagicBeamVFX2.mkv",
+                poster: "assets/img/printSite/MagicBeamPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/MagicBeamPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            14: {
+                title: "Magma Ball Effect",
+                description: "A molten fireball trailing smoke and embers, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/MagmaBallVFX_V2.mkv",
+                poster: "assets/img/printSite/MagmaBallPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/MagmaBallPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            15: {
+                title: "Magma Erode Effect",
+                description: "A dissolve effect that erodes surfaces away behind glowing molten edges, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/MagmaErodeVFX.mkv",
+                poster: "assets/img/printSite/MagmaErodePrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/MagmaErodePrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            16: {
+                title: "Hit Effect",
+                description: "A quick, punchy impact flash with crossed energy slashes and a star burst, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/SimpleHitEffect.mkv",
+                poster: "assets/img/printSite/HitEffectPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/HitEffectPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
+            },
+            17: {
+                title: "Tornado Effect",
+                description: "A dark smoke tornado swirling with red debris, created using Unreal Engine Niagara.",
+                video: "assets/img/printSite/TornadoFXV2.mkv",
+                poster: "assets/img/printSite/TornadoPrint.png",
+                technologies: ["Unreal Engine Niagara"],
+                features: [
+                    
+                ],
+                role: "VFX Artist",
+                status: "Completed",
+                platform: "Unreal Engine",
+                duration: "TBD",
+                teamSize: "Solo",
+                screenshots: [
+                    "assets/img/printSite/TornadoPrint.png"
+                ],
+                liveUrl: "",
+                githubUrl: "",
+                downloadUrl: ""
             }
         };
 
